@@ -54,6 +54,22 @@ def insert_node(node):
     index_node.next_ = node
 
 
+def delete_node(node):
+    global head, end
+
+    indexptr = head
+    deleteptr = None
+
+    while(indexptr != end):
+        if indexptr.next_.data == node.data:
+            deleteptr = indexptr.next_
+            break
+        indexptr = indexptr.next_
+
+    indexptr.next_ = indexptr.next_.next_
+    del deleteptr
+
+
 if __name__ == '__main__':
     init()
 
@@ -73,5 +89,15 @@ if __name__ == '__main__':
     ptr = head.next_
 
     for i in range(5):
+        print(ptr.data)
+        ptr = ptr.next_
+
+    print
+
+    delete_node(temp)
+
+    ptr = head.next_
+
+    for i in range(4):
         print(ptr.data)
         ptr = ptr.next_
