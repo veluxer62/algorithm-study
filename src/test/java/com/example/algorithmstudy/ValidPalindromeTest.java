@@ -37,7 +37,7 @@ public class ValidPalindromeTest {
         assertTrue(actual);
     }
 
-    public static class Solution {
+    private static class Solution {
         public boolean isPalindrome(String s) {
             var start = 0;
             var end = s.length() - 1;

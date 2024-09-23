@@ -22,7 +22,7 @@ public class ReverseStringTest {
         assertArrayEquals(new char[]{'g', 'f', 'e', 'd', 'c', 'b', 'a'}, given);
     }
 
-    static class Solution {
+    private static class Solution {
         public void reverseString(char[] arr) {
             int start = 0;
             int end = arr.length - 1;

@@ -26,7 +26,7 @@ public class ReorderDataInLogFilesTest {
         assertArrayEquals(expected, actual);
     }
 
-    static class Solution {
+    private static class Solution {
         public String[] reorderLogFiles(String[] logs) {
             var letterList = new ArrayList<LogData>();
             var digitList = new ArrayList<LogData>();
