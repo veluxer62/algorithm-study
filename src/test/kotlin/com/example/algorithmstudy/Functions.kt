@@ -1,5 +1,6 @@
 package com.example.algorithmstudy
 
+import com.example.algorithmstudy.utils.RunningTimeRecorder
 import kotlin.random.Random
 
 fun <T> record(fn: RunningTimeRecorder<T>): T {

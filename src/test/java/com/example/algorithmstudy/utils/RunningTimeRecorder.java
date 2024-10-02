@@ -1,4 +1,4 @@
-package com.example.algorithmstudy;
+package com.example.algorithmstudy.utils;
 
 import java.util.logging.Logger;
 

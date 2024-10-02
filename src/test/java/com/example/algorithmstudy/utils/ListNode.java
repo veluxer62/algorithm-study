@@ -1,21 +1,16 @@
-package com.example.algorithmstudy;
+package com.example.algorithmstudy.utils;
 
 import java.util.List;
 
 public class ListNode {
-    int val;
-    ListNode next;
+    public int val;
+    public ListNode next;
 
     ListNode(int val) {
         this.val = val;
     }
 
-    ListNode(int val, ListNode next) {
-        this.val = val;
-        this.next = next;
-    }
-
-    ListNode(List<Integer> list) {
+    public ListNode(List<Integer> list) {
         this.val = list.get(0);
         var temp = this;
         for (int i = 1; i < list.size(); i++) {

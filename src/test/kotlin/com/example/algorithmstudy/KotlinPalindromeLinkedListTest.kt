@@ -1,5 +1,6 @@
 package com.example.algorithmstudy
 
+import com.example.algorithmstudy.utils.ListNode
 import org.junit.jupiter.api.Assertions.assertTrue
 import org.junit.jupiter.api.Test
 import java.util.LinkedList
