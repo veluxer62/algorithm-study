@@ -24,3 +24,7 @@ fun generateIntArray(size: Int): IntArray {
 
     return randomArray
 }
+
+fun generateList(size: Int): List<Int> {
+    return List(size) { Random.nextInt() }
+}
