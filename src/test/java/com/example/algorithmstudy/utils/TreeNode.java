@@ -1,6 +1,6 @@
 package com.example.algorithmstudy.utils;
 
-import java.util.List;
+import java.util.Objects;
 
 public class TreeNode {
     public int val;
@@ -27,5 +27,37 @@ public class TreeNode {
         node.right = createTree(array, 2 * index + 2);
 
         return node;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+
+        if (obj == null || getClass() != obj.getClass()) {
+            return false;
+        }
+
+        TreeNode other = (TreeNode) obj;
+
+        if (this.val != other.val) {
+            return false;
+        }
+
+        if (this.left == null && other.left != null || this.left != null && !this.left.equals(other.left)) {
+            return false;
+        }
+
+        if (this.right == null && other.right != null || this.right != null && !this.right.equals(other.right)) {
+            return false;
+        }
+
+        return true;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(val, left, right);
     }
 }
