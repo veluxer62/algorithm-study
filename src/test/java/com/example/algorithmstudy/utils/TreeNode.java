@@ -60,4 +60,26 @@ public class TreeNode {
     public int hashCode() {
         return Objects.hash(val, left, right);
     }
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        buildString(this, sb, "", true);
+        return sb.toString();
+    }
+
+    private void buildString(TreeNode node, StringBuilder sb, String prefix, boolean isTail) {
+        if (node != null) {
+            sb.append(prefix)
+                    .append(isTail ? "└── " : "├── ")
+                    .append(node.val)
+                    .append("\n");
+
+            String childPrefix = prefix + (isTail ? "    " : "│   ");
+            if (node.left != null || node.right != null) {
+                buildString(node.left, sb, childPrefix, node.right == null);
+                buildString(node.right, sb, childPrefix, true);
+            }
+        }
+    }
 }
