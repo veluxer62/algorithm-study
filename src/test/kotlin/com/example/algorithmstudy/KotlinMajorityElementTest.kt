@@ -1,3 +1,5 @@
+package com.example.algorithmstudy
+
 import org.junit.jupiter.api.Assertions
 import org.junit.jupiter.api.Test
 
