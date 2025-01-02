@@ -11,6 +11,11 @@ public class ListNode {
         this.val = val;
     }
 
+    public ListNode(int val, ListNode next) {
+        this.val = val;
+        this.next = next;
+    }
+
     public ListNode(List<Integer> list) {
         this.val = list.get(0);
         var temp = this;
@@ -26,7 +31,7 @@ public class ListNode {
         if (o == null || getClass() != o.getClass()) return false;
 
         var me = toLinkedList(this);
-        var other = toLinkedList((ListNode)o);
+        var other = toLinkedList((ListNode) o);
         return me.equals(other);
     }
 
